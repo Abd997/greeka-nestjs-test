@@ -40,6 +40,6 @@ export class TaskRepo {
 
   async exists(uid: string) {
     const exists = await this.prisma.task.count({ where: { uid }, take: 1 });
-	return exists > 0
+    return exists > 0;
   }
 }

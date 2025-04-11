@@ -1,6 +1,14 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import { TaskStatus, TaskPriority } from '@prisma/client';
-import { IsArray, IsBoolean, IsDate, IsEnum, IsInt, IsOptional, IsString } from 'class-validator';
+import {
+  IsArray,
+  IsBoolean,
+  IsDate,
+  IsEnum,
+  IsInt,
+  IsOptional,
+  IsString,
+} from 'class-validator';
 import { Transform, Type } from 'class-transformer';
 
 export class QueryTaskDto {

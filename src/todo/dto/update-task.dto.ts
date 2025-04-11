@@ -1,4 +1,7 @@
-import { PickType } from "@nestjs/swagger"
-import { CreateTaskDto } from "./create-task.dto"
+import { PickType } from '@nestjs/swagger';
+import { CreateTaskDto } from './create-task.dto';
 
-export class UpdateTaskDto extends PickType(CreateTaskDto, ['status', 'priority']){}
+export class UpdateTaskDto extends PickType(CreateTaskDto, [
+  'status',
+  'priority',
+]) {}
