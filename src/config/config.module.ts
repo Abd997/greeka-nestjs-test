@@ -7,12 +7,6 @@ import * as Joi from 'joi';
   imports: [
     ConfigModule.forRoot({
       cache: true,
-      ignoreEnvFile: false,
-      validationSchema: Joi.object({
-        NODE_ENV: Joi.string()
-          .valid('test', 'local', 'dev', 'prod')
-          .default('local'),
-      }),
     }),
   ],
 })
