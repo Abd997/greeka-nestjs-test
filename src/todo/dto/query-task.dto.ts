@@ -83,7 +83,7 @@ export class QueryTaskDto {
   @IsOptional()
   @Type(() => Date)
   @IsDate()
-  dueDateBefore?: Date;
+  dateDueBefore?: Date;
 
   @ApiPropertyOptional({
     description: 'Only return tasks due after this date',
@@ -94,5 +94,27 @@ export class QueryTaskDto {
   @IsOptional()
   @Type(() => Date)
   @IsDate()
-  dueDateAfter?: Date;
+  dateDueAfter?: Date;
+
+  @ApiPropertyOptional({
+    description: 'Only return tasks created before this date',
+    type: String,
+    format: 'date-time',
+    example: '2025-05-01T00:00:00.000Z',
+  })
+  @IsOptional()
+  @Type(() => Date)
+  @IsDate()
+  dateCreatedBefore?: Date;
+
+  @ApiPropertyOptional({
+    description: 'Only return tasks created after this date',
+    type: String,
+    format: 'date-time',
+    example: '2025-04-01T00:00:00.000Z',
+  })
+  @IsOptional()
+  @Type(() => Date)
+  @IsDate()
+  dateCreatedAfter?: Date;
 }

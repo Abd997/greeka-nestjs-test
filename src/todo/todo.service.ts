@@ -85,14 +85,24 @@ export class TodoService {
         ...(dto.isActive && {
           isActive: dto.isActive,
         }),
-        ...(dto.dueDateBefore && {
+        ...(dto.dateDueBefore && {
           dateDue: {
-            lt: dto.dueDateBefore,
+            lt: dto.dateDueBefore,
           },
         }),
-        ...(dto.dueDateAfter && {
+        ...(dto.dateDueAfter && {
           dateDue: {
-            gt: dto.dueDateAfter,
+            gt: dto.dateDueAfter,
+          },
+        }),
+        ...(dto.dateCreatedBefore && {
+          dateDue: {
+            lt: dto.dateCreatedBefore,
+          },
+        }),
+        ...(dto.dateCreatedAfter && {
+          dateDue: {
+            gt: dto.dateCreatedAfter,
           },
         }),
       },
